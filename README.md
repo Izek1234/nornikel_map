@@ -22,19 +22,6 @@ document (PDF/DOCX/PPTX/TXT/MD/CSV/HTML, ≤15MB)
 
 ## Быстрый старт
 
-### 1. Docker Compose (Рекомендуемый)
-
-```bash
-# Сборка и запуск всего стека (Neo4j + Backend + Frontend)
-docker-compose up -d --build
-
-# Просмотр логов
-docker-compose logs -f
-
-# Остановка
-docker-compose down
-```
-
 ### 2. Локальный запуск (Development)
 
 **Предварительные требования:**
@@ -62,8 +49,8 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 **Frontend:**
 ```bash
 cd frontend
-pnpm install
-pnpm run dev
+npm install
+npm run dev
 ```
 
 **Windows (быстрый запуск):**
@@ -102,6 +89,8 @@ AUTH_SECRET_KEY=your_secret_key
 ```
 
 Если `NEO4J_PASSWORD` не задан, система запускается в **DEMO-режиме** на встроенных тестовых данных.
+
+Для работы с системой надо авторизоваться(это система контроля доступа для ограничения возможностей пользователей). Для входа с полными правами зайдите под логином admin и паролем admin.
 
 ### 4. Доступ
 
